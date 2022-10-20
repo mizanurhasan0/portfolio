@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Courgette&family=Monoton&family=Roboto:wght@100;300;400;500;700&family=Silkscreen:wght@400;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bgGradient{
+    background: linear-gradient(112.1deg,  #460c5c 11.4%,  #230331 70.2%);
+}
+.Gradient{
+    background: linear-gradient(112.1deg, #fa81e0 21.4%, #FF94E7 11.4%,  #7124EF  70.2%);
+}
+.TBGradient{
+    background: linear-gradient(112.1deg,  #242424 11.4%,  #020202  70.2%,#242424  70.2%);
+}
