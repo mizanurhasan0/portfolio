@@ -5,6 +5,7 @@ import { project1, project2, project3, project4 } from "../../Assets/Index";
 const MenuList = [
   { name: "Home", path: "/" },
   { name: "Blog", path: "/blog" },
+  { name: "Chat", path: "/chating" },
   { name: "Todos", path: "/todo" },
 ];
 
@@ -35,4 +36,6 @@ const ProjectList = [
   { id: 3, name: "Web3 project 3", img: project3 },
   { id: 4, name: "Web3 project 4", img: project4 },
 ];
+
+const chatingData = [];
 export { MenuList, ContactInfo, WrokSkills, ProjectList };

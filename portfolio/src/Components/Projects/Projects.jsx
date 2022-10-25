@@ -1,8 +1,10 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import Btn from "../Shares/Btn";
 import { ProjectList } from "../Shares/StaticData";
 
 export default function Projects() {
+  const navigation = useNavigate();
   return (
     <div className="text-white py-10">
       <h1 className="border-b-2 text-[1.875rem] font-Audiowide mb-5">
@@ -22,7 +24,11 @@ export default function Projects() {
               <p className="font-Roboto text-gray-400">
                 Click on the detail button to explore ore
               </p>
-              <Btn child={"Details"} cStyle="bg-gray-600 text-white" />
+              <Btn
+                child={"Details"}
+                onClick={() => navigation(`project?id=${project.id}`)}
+                cStyle="bg-gray-600 text-white"
+              />
             </div>
           </div>
         ))}

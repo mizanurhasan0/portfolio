@@ -1,5 +1,5 @@
-import { useRef, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { useEffect, useRef, useState } from "react";
+import { NavLink, useLocation } from "react-router-dom";
 import { logo } from "../../Assets/Index";
 import { HiMenuAlt3, HiOutlineDownload } from "react-icons/hi";
 import { SlClose } from "react-icons/sl";
@@ -11,10 +11,29 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   let refContent = useRef(false);
   OutSideClick(refContent, setOpen);
+
+  const [display, setDisplay] = useState(true);
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.pathname.startsWith("/project")) {
+      setDisplay(false);
+    } else {
+      setDisplay(true);
+    }
+    return () => {
+      setDisplay(false);
+    };
+  }, [location]);
+
   return (
     <div
       ref={refContent}
-      className="TBGradient fixed top-0 left-0 w-full shadow-xl text-gray-200 hover:text-white  text-2xl z-50"
+      className={`${
+        display
+          ? "TBGradient fixed top-0 left-0 w-full shadow-xl text-gray-200 hover:text-white  text-2xl z-50"
+          : "hidden"
+      } `}
     >
       <div
         className="py-4 TBGradient px-6 md:px-0 md:container 

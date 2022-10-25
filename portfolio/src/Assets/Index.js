@@ -7,6 +7,7 @@ const project1 = require("./img/Project/project1.jpg");
 const project2 = require("./img/Project/project2.jpg");
 const project3 = require("./img/Project/project3.jpg");
 const project4 = require("./img/Project/project4.jpg");
+const avater = require("./icons/avater.png");
 
 export {
   logo,
@@ -18,4 +19,5 @@ export {
   project2,
   project3,
   project4,
+  avater,
 };
