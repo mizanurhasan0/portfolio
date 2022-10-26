@@ -12,6 +12,7 @@ module.exports = {
         Monoton: "Monoton",
         Roboto: "Roboto",
         Silkscreen: "Silkscreen",
+        Lato: "Lato",
       },
     },
   },
